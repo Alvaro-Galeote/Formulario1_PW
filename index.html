@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="PQG">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <title> Formulario de registro - Mi web.</title>
+
+        <style>
+            body{
+                background:hsla(140, 85%, 47%, 0.336);
+                margin:0
+            }
+            .form{
+                width:340px;
+                height:840px;
+                background:#e6e6e6;
+                border-radius:8px;
+                box-shadow:0 0 40px -10px #000;
+                margin:calc(50vh - 220px) auto;
+                padding:20px 30px;
+                max-width:calc(100vw - 40px);
+                box-sizing:border-box;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                position:relative
+            }
+            h2{
+                margin:10px 0;
+                padding-bottom:10px;
+                width:180px;
+                color:#78788c;
+                border-bottom:3px solid #78788c
+            }
+            input{
+                width:100%;
+                padding:10px;
+                box-sizing:border-box;
+                background:none;
+                outline:none;
+                resize:none;
+                border:0;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                transition:all .3s;
+                border-bottom:2px solid #bebed2
+            }
+            input:focus{
+                border-bottom:2px solid #78788c
+            }
+            p:before{
+                content:attr(type);
+                display:block;
+                margin:28px 0 0;
+                font-size:14px;
+                color:#5a5a5a
+            }
+            label:before{
+                content:attr(type);
+                display:block;
+                margin:28px 0 0;
+                font-size:14px;
+                color:#5a5a5a
+            }
+            button{
+                float:right;
+                padding:8px 12px;
+                margin:8px 0 0;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                border:2px solid #78788c;
+                background:0;color:#5a5a6e;
+                cursor:pointer;
+                transition:all .3s
+            }
+            
+            .contactame{
+                content:'Hi';
+                position:absolute;
+                bottom:-15px;right:-20px;
+                background:#50505a;
+                color:#fff;
+                width:320px;
+                padding:16px 4px 16px 0;
+                border-radius:6px;
+                font-size:13px;
+                box-shadow:10px 10px 40px -14px #000
+            }
+            span{
+                margin:0 5px 0 15px
+            }
+
+            .genero,.genero label{
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: 13px;
+                color: #50505a;
+            }
+            .genero input, option{
+                width: 10%;
+                font-size:14px;
+                color:#5a5a5a
+            }
+
+            .enviar{
+                width:40%;
+                padding: 5px 0;
+                font-size:18px;
+                font-weight: bold;
+                color:white;
+                background:orange;
+                border:none;
+                border-radius:5px;
+                transition:1s all;
+                cursor: pointer;
+            }
+
+            .enviar:hover{
+                background:#ea899a;
+                transform: scale(1.2);
+            }
+
+            .sexos,.checkbox{
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                color: #50505a;
+            }
+            .checkbox{
+                margin:20px 0;
+                color: #50505a;
+            }
+
+            .checkbox input{
+                width: 10%;
+                color: #50505a;
+            }
+
+            #checkbox{
+                font-size: 13px;
+                color: #50505a;
+            }   
+            </style>
+    </head>
+
+  <body>
+    <form class="form" action="" method="get" novalidate enctype="">
+
+        <h2>Contactanos!!</h2>
+
+        <p type="Nombre:"><input placeholder="Escribe tu nombre aquí.." required minlength="4" maxlength="50"></input></p>
+        <p type="Apellidos:"><input type="text" name="apellido" placeholder="Escribe tus apellidos aquí.." required minlength="4" maxlength="50"></input></p>
+        
+        <div class="genero">
+        <radiogroup>
+                        <label for="promociones">Sexo:</label>
+                        <br>
+                        <input type="radio" id="sexo" name="sexo" value="hombre" autofocus checked class="sexos"> Hombre<br>
+                        <input type="radio" id="sexo" name="sexo" value="mujer" class="sexos"> Mujer<br>
+                    
+        </radiogroup>
+        </div>
+
+        <p type="Email:"><input placeholder="Email para que te contactemos.."></input></p>
+        <p type="Mensaje:"><input placeholder="Que deseas saber.."></input></p>
+                
+                  <p>
+                    <p type="Poblacion:"></p>
+                    <select name="poblacion" id="poblacion">
+                    <option>Orizaba</option>
+                    <option selected>Cordoba</option>
+                    <option>Xalapa</option>
+                    <option>Veracruz</option>
+                    </select> 
+                    </p>
+
+
+
+            <label class="checkbox"><input type="checkbox" checked" id="checkbox">Deseo recibir información sobre novedades y 
+            ofertas</label>
+            <br>
+            <label class="checkbox"><input type="checkbox" id="checkbox">Declaro haber leído y aceptar las condiciones 
+                generales del programa y la normativa sobre protección de datos</label>
+
+
+
+                <br>
+            <button class="enviar">Enviar</button>
+
+
+
+
+        <div class="contactame">
+          <span ></span>244 4428 594
+          <span ></span> alvarogaleote58@gmail.com
+        </div>
+
+      </form>
+   </body>
+
+</html>
